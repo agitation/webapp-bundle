@@ -14,7 +14,7 @@ use Agit\ApiBundle\Annotation\Property;
 use Agit\ApiBundle\Api\Object\AbstractRequestObject;
 
 /**
- * @Object(namespace="webapp.v1")
+ * @Object(namespace="app.v1")
  *
  * Login credentials.
  */

@@ -1,0 +1,36 @@
+{% extends "AgitWebappBundle:Include:page.html.twig" %}
+
+{% agit.capability "" %}
+{% set noindex = 1 %}
+{% agit.name t("Password update") %}
+
+{% block css %}
+    {% stylesheets
+        "@AgitTriggerBundle/Resources/public/css/handler.css"
+        filter="?cleancss"
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block js %}
+    {% javascripts
+        "@AgitUiBundle/Resources/public/js/lib/elem/Form.js"
+        "@AgitUiBundle/Resources/public/js/lib/elem/FormRow.js"
+        "@AgitUiBundle/Resources/public/js/lib/field/Password.js"
+
+        "@AgitTriggerBundle/Resources/public/js/lib/TriggerHandler.js"
+        "@AgitWebappBundle/Resources/public/js/lib/Form.js"
+        "@AgitWebappBundle/Resources/public/js/ctl/init.js"
+        "@AgitWebappBundle/Resources/public/js/ctl/page.newpass.js"
+
+        filter="?uglifyjs"
+    %}
+    <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block templates %}
+    {% include "AgitTriggerBundle:Include:template.handler.html.twig" %}
+    {% include "AgitWebappBundle:Include:template.forms.html.twig" %}
+{% endblock %}

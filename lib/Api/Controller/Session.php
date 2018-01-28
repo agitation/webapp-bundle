@@ -19,7 +19,7 @@ use Agit\UserBundle\Exception\UnauthorizedException;
 use Agit\UserBundle\Service\UserService;
 
 /**
- * @Controller(namespace="webapp.v1")
+ * @Controller(namespace="app.v1")
  * @Depends({"@agit.user"})
  */
 class Session extends AbstractController

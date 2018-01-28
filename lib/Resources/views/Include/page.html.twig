@@ -3,6 +3,7 @@
 {% block area_css %}
     {% stylesheets
         "@AgitUiBundle/Resources/public/css/spinner.css"
+        "@AgitUiBundle/Resources/public/css/font.awesome.css"
         "@AgitUiBundle/Resources/public/css/indicator.css"
         "@AgitUiBundle/Resources/public/css/calendar.css"
         "@AgitUiBundle/Resources/public/css/datepicker.css"
@@ -58,6 +59,8 @@
         "@AgitValidationBundle/Resources/public/js/lib/Validation.js"
         "@AgitValidationBundle/Resources/public/js/var/translations.js"
 
+        "@AgitMultilangBundle/Resources/public/js/lib/mlang.js"
+
         "@AgitPageBundle/Resources/public/js/lib/tool.js"
 
         "@AgitUiBundle/Resources/public/js/lib/elem/Spinner.js"
@@ -72,13 +75,13 @@
         "@AgitUiBundle/Resources/public/js/lib/field/Calendar.js"
         "@AgitUiBundle/Resources/public/js/lib/field/Datepicker.js"
 
-        "@AgitWebappBundle/Resources/public/js/lib/NavigationLogout.js"
         "@AgitWebappBundle/Resources/public/js/var/translations.js"
         "@AgitWebappBundle/Resources/public/js/var/api.js"
 
         "@AgitWebappBundle/Resources/public/js/lib/Navigation.js"
         "@AgitWebappBundle/Resources/public/js/lib/NavigationItem.js"
         "@AgitWebappBundle/Resources/public/js/lib/NavigationPages.js"
+        "@AgitWebappBundle/Resources/public/js/lib/NavigationLogout.js"
         "@AgitWebappBundle/Resources/public/js/lib/NavigationLanguages.js"
         "@AgitWebappBundle/Resources/public/js/lib/View.js"
 
@@ -110,7 +113,6 @@
     {% include "AgitUiBundle:Include:template.indicator.html.twig" %}
     {% include "AgitUiBundle:Include:template.calendar.html.twig" %}
     {% include "AgitWebappBundle:Include:template.page.html.twig" %}
-    {% include "AgitWebappBundle:Include:template.menu.html.twig" %}
 
     {% block area_extra_templates %}{% endblock %}
 {% endblock %}

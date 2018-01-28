@@ -17,7 +17,7 @@ use Agit\WebappBundle\Api\Object\Login;
 use Agit\WebappBundle\Service\PasswordService;
 
 /**
- * @Controller(namespace="webapp.v1")
+ * @Controller(namespace="app.v1")
  * @Depends({"@agit.webapp.password"})
  */
 class Password extends AbstractController
