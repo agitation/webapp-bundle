@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 /*
- * @package    agitation/profile-bundle
- * @link       http://github.com/agitation/profile-bundle
+ * @package    agitation/webapp-bundle
+ * @link       http://github.com/agitation/webapp-bundle
  * @author     Alexander Günsche
  * @license    http://opensource.org/licenses/MIT
  */
@@ -22,7 +22,7 @@ use Symfony\Bundle\TwigBundle\TwigEngine;
 
 class PasswordService
 {
-    const TRIGGER_TAG = 'profile.pass.reset';
+    const TRIGGER_TAG = 'webapp.pass.reset';
 
     private $entityManager;
 
