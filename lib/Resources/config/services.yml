@@ -11,3 +11,9 @@ services :
             - "@agit.page"
             - "%agit_mail_from%"
             - "%agit_mail_replyto%"
+
+
+    agit.webapp.setting.name:
+        class: Agit\WebappBundle\Setting\NameSetting
+        arguments: [ "@agit.validation" ]
+        tags: [{ name: agit.setting }]
