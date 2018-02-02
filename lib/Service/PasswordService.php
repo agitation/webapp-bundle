@@ -65,8 +65,8 @@ class PasswordService
         $user = $this->userService->getUser($email);
         $encPass = $this->userService->encodePassword($user, $password);
 
-        $message = Swift_Message::newInstance()
-            ->setSubject(Translate::t('Password reset'))
+        $message = new Swift_Message(Translate::t('Password reset'));
+        $message
             ->setFrom([$this->mailFrom => 'Customer Service'])
             ->setReplyTo([$this->mailReplyto => 'Customer Service'])
             ->setTo([$user->getEmail() => $user->getName()]);
