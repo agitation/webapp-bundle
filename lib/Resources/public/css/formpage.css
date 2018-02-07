@@ -1,0 +1,10 @@
+/* for pages which consist only of one main form, e.g. login  */
+article                                             { padding-top: 40px; }
+article form                                        { padding: 10px; background: #fafdff; border-top: 2px solid #71abdb; box-shadow: 0 0 4px #c4d0db }
+article form th                                     { text-align: left }
+
+
+@media (min-width: 992px)
+{
+    article                                         { padding-top: 80px; }
+}
