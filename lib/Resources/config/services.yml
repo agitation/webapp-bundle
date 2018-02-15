@@ -9,8 +9,8 @@ services :
             - "@templating"
             - "@agit.trigger"
             - "@agit.page"
-            - "%agit_mail_from%"
-            - "%agit_mail_replyto%"
+            - "%env(mail_from)%"
+            - "%env(mail_replyto)%"
 
 
     agit.webapp.setting.name:
