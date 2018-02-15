@@ -10,7 +10,6 @@ services :
             - "@agit.trigger"
             - "@agit.page"
             - "%env(mail_from)%"
-            - "%env(mail_replyto)%"
 
 
     agit.webapp.setting.name:

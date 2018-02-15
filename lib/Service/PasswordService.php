@@ -38,8 +38,6 @@ class PasswordService
 
     private $mailFrom;
 
-    private $mailReplyto;
-
     public function __construct(
         EntityManagerInterface $entityManager,
         UserService $userService,
@@ -47,8 +45,7 @@ class PasswordService
         TwigEngine $templatingService,
         TriggerService $triggerService,
         PageService $pageService,
-        $mailFrom,
-        $mailReplyto
+        $mailFrom
     ) {
         $this->entityManager = $entityManager;
         $this->userService = $userService;
@@ -57,7 +54,6 @@ class PasswordService
         $this->templatingService = $templatingService;
         $this->triggerService = $triggerService;
         $this->mailFrom = $mailFrom;
-        $this->mailReplyto = $mailReplyto;
     }
 
     public function registerPasswordReset($email, $password)
@@ -67,8 +63,7 @@ class PasswordService
 
         $message = new Swift_Message(Translate::t('Password reset'));
         $message
-            ->setFrom([$this->mailFrom => 'Customer Service'])
-            ->setReplyTo([$this->mailReplyto => 'Customer Service'])
+            ->setFrom([$this->mailFrom])
             ->setTo([$user->getEmail() => $user->getName()]);
 
         $trigger = new TriggerData(['id' => $user->getId(), 'encPass' => $encPass]);
