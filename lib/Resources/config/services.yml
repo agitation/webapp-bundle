@@ -9,7 +9,7 @@ services :
             - "@templating"
             - "@agit.trigger"
             - "@agit.page"
-            - "%env(mail_from)%"
+            - "%mail_from%"
 
 
     agit.webapp.setting.name:
