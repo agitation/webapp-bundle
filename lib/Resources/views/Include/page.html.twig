@@ -31,10 +31,7 @@
         window.ag = {
             cfg : {
                 locale : "{{ locale }}",
-                baseUrl : "{{ getAppUrlBase() }}",
-                apiBaseUrl : "{{ getApiUrlBase() }}",
                 csrfToken : "{{ getCsrfToken() }}",
-                reloadOn401 : true,
                 languages : {{ getPageLocaleUrls()|json_encode(64 + 256)|raw }}
             }
         };
