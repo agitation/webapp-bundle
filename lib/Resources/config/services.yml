@@ -1,17 +1,4 @@
 services :
-    agit.webapp.password :
-        class : Agit\WebappBundle\Service\PasswordService
-        tags : [{ name: kernel.event_listener, event: agit.trigger, method: updatePassword }]
-        arguments :
-            - "@doctrine.orm.entity_manager"
-            - "@agit.user"
-            - "@mailer"
-            - "@templating"
-            - "@agit.trigger"
-            - "@agit.page"
-            - "%mail_from%"
-
-
     agit.webapp.setting.name:
         class: Agit\WebappBundle\Setting\NameSetting
         arguments: [ "@agit.validation" ]
